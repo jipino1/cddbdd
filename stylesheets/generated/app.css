@@ -1,0 +1,281 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+a img {
+  border: none;
+}
+
+body {
+  background: url("../../images/bkg.main.jpg") repeat;
+  background-size: cover;
+}
+
+#main {
+  width: 100%;
+}
+
+h1, h2, h3, h4, p, a {
+  color: #fff;
+  font-family: Verdana, Helvetica, sans-serif;
+}
+
+#content {
+  margin: 0 auto;
+  width: 1024px;
+}
+#content .divider {
+  background: url("../../images/bkg.divider.png") no-repeat;
+  margin: 0 auto;
+  height: 7px;
+  width: 655px;
+}
+#content .divider.top {
+  margin-top: 50px;
+}
+#content .vertical-bkg {
+  float: left;
+  height: 100%;
+  min-height: 768px;
+  width: 32px;
+}
+#content .vertical-bkg.red {
+  background: url("../../images/bkg.red.bar.jpg") repeat-y;
+  margin-left: 32px;
+}
+#content .vertical-bkg.orange {
+  background: url("../../images/bkg.orange.bar.jpg") repeat-y;
+}
+#content .knob-bar {
+  background-color: #33322a;
+  border-radius: 3px;
+  float: left;
+  height: 150px;
+  margin-right: 65px;
+  width: 12px;
+  -webkit-box-shadow: inset 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+}
+#content .knob-bar .knob {
+  background: url("../../images/bkg.knob.png") no-repeat;
+  float: left;
+  height: 44px;
+  margin-left: -16px;
+  width: 44px;
+}
+#content .knob-bar .knob.one {
+  margin-top: 70px;
+}
+#content .knob-bar .knob.two {
+  margin-top: 35px;
+}
+#content .knob-bar .knob.three {
+  margin-top: 60px;
+}
+#content .knob-bar .knob.four {
+  margin-top: 100px;
+}
+#content .knob-bar .knob.five {
+  margin-top: 10px;
+}
+#content #msg-container {
+  background-color: #33322a;
+  border-radius: 2px;
+  float: left;
+  height: 523px;
+  margin: 25px;
+  width: 75%;
+  -webkit-box-shadow: inset 0px 3px 15px 12px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: inset 0px 3px 15px 12px rgba(0, 0, 0, 0.57);
+  box-shadow: inset 0px 3px 15px 12px rgba(0, 0, 0, 0.57);
+}
+#content #msg-container #msg-followup {
+  display: none;
+}
+#content #msg-container h1 {
+  font-size: 33px;
+  padding: 25px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+#content #msg-container p {
+  font-size: 12px;
+  line-height: 30px;
+  padding: 40px 55px;
+  text-transform: uppercase;
+}
+#content #btn-container {
+  float: left;
+  border: 1px solid #000;
+  margin-top: 35px;
+  width: 65px;
+}
+#content #btn-container .btn {
+  background: url("../../images/bkg.button.jpg") no-repeat;
+  border: 1px solid #000;
+  float: left;
+  height: 63px;
+  width: 63px;
+}
+#content #knob-container {
+  float: left;
+  margin-left: 35px;
+  width: 40%;
+}
+#content #init-btn {
+  background: url("../../images/bkg.initiate.png") no-repeat;
+  float: left;
+  height: 147px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 467px;
+}
+#content #init-btn:hover {
+  background-position: 0 -147px;
+}
+#content #panel-content {
+  display: none;
+  float: left;
+  margin: 25px;
+  opacity: 0;
+}
+#content #panel-content p {
+  color: #37362e;
+}
+#content #panel-content #panel-one .age-header {
+  background: url("../../images/panel.age.btn.png") no-repeat;
+  float: left;
+  height: 52px;
+  text-indent: -9999px;
+  width: 393px;
+}
+#content #panel-content #panel-one .previous-job-header {
+  background: url("../../images/panel.prev.job.btn.png") no-repeat;
+  float: left;
+  height: 52px;
+  margin-left: 60px;
+  text-indent: -9999px;
+  width: 420px;
+}
+#content #panel-content .left-container, #content #panel-content .right-container {
+  float: left;
+  margin: 50px 0;
+  width: 50%;
+}
+#content #panel-content .right-container {
+  padding-left: 3%;
+  width: 45%;
+}
+#content #panel-content .right-container p {
+  margin-bottom: 23px;
+  text-align: left;
+  text-transform: uppercase;
+}
+#content #panel-content .right-container .knob-bar {
+  height: 452px;
+  margin-right: 15px;
+}
+#content #age-knob {
+  background: url("../../images/panel.age.knob.png") no-repeat;
+  float: left;
+  height: 280px;
+  margin: 76px 0 0 16px;
+  text-indent: -9999px;
+  width: 279px;
+}
+#content #age-ranges {
+  margin: 63px 0 0 248px;
+  position: absolute;
+}
+#content #age-ranges p {
+  font-size: 13px;
+}
+#content #age-ranges .age-range {
+  color: #37362e;
+  margin: 33px 0;
+}
+#content #age-ranges .age-range:nth-child(2) {
+  margin-left: 35px;
+}
+#content #age-ranges .age-range:nth-child(3) {
+  margin-left: 51px;
+}
+#content #age-ranges .age-range:nth-child(4) {
+  margin-left: 45px;
+}
+#content #age-ranges .age-range:nth-child(5) {
+  margin-left: 35px;
+}
+#content .bottom-container {
+  width: 100%;
+}
+#content .bottom-container .panel-counter {
+  background: url("../../images/bkg.panel.blank.png") no-repeat;
+  float: left;
+  height: 52px;
+  margin: 15px 39px 0;
+  width: 334px;
+}
+#content .bottom-container .panel-counter .counter {
+  background: url("../../images/bkg.panel.counter.png") no-repeat;
+  float: left;
+  height: 18px;
+  margin: 15px 0 0 95px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 149px;
+}
+#content .bottom-container #back-btn,
+#content .bottom-container #next-btn {
+  float: left;
+  height: 74px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 233px;
+}
+#content .bottom-container #back-btn {
+  background: url("../../images/bkg.panel.back.png") no-repeat;
+}
+#content .bottom-container #back-btn:hover {
+  background-position: 0 -74px;
+}
+#content .bottom-container #next-btn {
+  background: url("../../images/bkg.panel.next.png") no-repeat;
+}
+#content .bottom-container #next-btn:hover {
+  background-position: 0 -74px;
+}
+
+/*# sourceMappingURL=app.css.map */
