@@ -481,6 +481,24 @@ h1, h2, h3, h4, p, a {
   float: left;
   width: 100%;
 }
+#content #panel-content #panel-8 .header-one {
+  background-position: 0 -573px;
+  margin-right: 40px;
+  width: 392px;
+}
+#content #panel-content #panel-8 .header-two {
+  background-position: 0 -626px;
+  width: 423px;
+}
+#content #panel-content #panel-8 .left-container p {
+  margin-bottom: 23px;
+  text-align: left;
+  text-transform: uppercase;
+}
+#content #panel-content #panel-8 .left-container .knob-bar {
+  height: 452px;
+  margin-right: 15px;
+}
 #content #age-knob {
   background: url("../../images/panel.age.knob.png") no-repeat;
   float: left;

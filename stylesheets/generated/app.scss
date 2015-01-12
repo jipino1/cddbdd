@@ -152,6 +152,14 @@ box-shadow: inset 0px 3px 15px 12px rgba(0,0,0,0.57);
 			.header-one { background-position: 0 -509px; width: 800px; }
 			.item { float: left; width: 100%; }
 		}
+		#panel-8 {
+			.header-one { background-position: 0 -573px; margin-right: 40px; width: 392px; }
+			.header-two { background-position: 0 -626px; width: 423px; }
+			.left-container {
+				p { margin-bottom: 23px; text-align: left; text-transform: uppercase; }
+				.knob-bar { height: 452px; margin-right: 15px; }
+			}
+		}
 	}
 	#age-knob { background: url('../../images/panel.age.knob.png') no-repeat; float: left; height: 280px; margin: 76px 0 0 16px; text-indent: -9999px; width: 279px; }
 	#age-ranges { 
