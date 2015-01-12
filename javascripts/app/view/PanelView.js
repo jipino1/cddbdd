@@ -68,6 +68,7 @@ define(['underscore', 'backbone', 'swig', 'helpers/events', 'plugins/text!templa
 						view.panelCounter.css({"background-position" : "0 " + bgPos + "px"})
 						
 						view.sectionCounter++;
+						console.log("go")
 					});
 				}
 			});
