@@ -31,7 +31,8 @@ h1, h2, h3, h4, p, a { color: #fff; font-family: Verdana, Helvetica, sans-serif;
 		}
 	}
 	.header-one,
-	.header-two {
+	.header-two,
+	.header-three {
 		background: url('../../images/bkg.headers.sprite.png') no-repeat; float: left; height: 52px; overflow: hidden; text-indent: -9999px; 
 	}
 	.item-word { background: #fff; color: #37362e; float: left; font-family: Helvetica, Verdana, sans-serif; font-size: 15px; margin-bottom: 15px; padding: 18px 15px; text-align: center; text-transform: uppercase; width: 55%; }
@@ -158,6 +159,19 @@ box-shadow: inset 0px 3px 15px 12px rgba(0,0,0,0.57);
 			.left-container {
 				p { margin-bottom: 23px; text-align: left; text-transform: uppercase; }
 				.knob-bar { height: 452px; margin-right: 15px; }
+			}
+		}
+		#panel-9 {
+			.header-one { background-position: 0 -731px; margin-right: 40px; width: 271px; }
+			.header-two { background-position: -298px -731px; margin-right: 40px; width: 275px; }
+			.header-three { background-position: -598px -731px; width: 268px; }
+			.knob-container { float: left; margin: 0 auto; width: 28%; }
+			.knob { background: url('../../images/knob.sm.png') no-repeat; float: left; height: 176px; margin-left: 16%; text-indent: -9999px; width: 177px;  }
+			.knob-selections { float: left; margin: 0 auto 0 15%; text-align: center; width: 60%; }
+			.selection {
+				float: left; font-weight: bold; text-align: center; text-transform: uppercase; 
+				&.left { float: left; }
+				&.right { float: right; }
 			}
 		}
 	}

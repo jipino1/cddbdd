@@ -115,7 +115,8 @@ h1, h2, h3, h4, p, a {
   margin-top: 10px;
 }
 #content .header-one,
-#content .header-two {
+#content .header-two,
+#content .header-three {
   background: url("../../images/bkg.headers.sprite.png") no-repeat;
   float: left;
   height: 52px;
@@ -498,6 +499,51 @@ h1, h2, h3, h4, p, a {
 #content #panel-content #panel-8 .left-container .knob-bar {
   height: 452px;
   margin-right: 15px;
+}
+#content #panel-content #panel-9 .header-one {
+  background-position: 0 -731px;
+  margin-right: 40px;
+  width: 271px;
+}
+#content #panel-content #panel-9 .header-two {
+  background-position: -298px -731px;
+  margin-right: 40px;
+  width: 275px;
+}
+#content #panel-content #panel-9 .header-three {
+  background-position: -598px -731px;
+  width: 268px;
+}
+#content #panel-content #panel-9 .knob-container {
+  float: left;
+  margin: 0 auto;
+  width: 28%;
+}
+#content #panel-content #panel-9 .knob {
+  background: url("../../images/knob.sm.png") no-repeat;
+  float: left;
+  height: 176px;
+  margin-left: 16%;
+  text-indent: -9999px;
+  width: 177px;
+}
+#content #panel-content #panel-9 .knob-selections {
+  float: left;
+  margin: 0 auto 0 25%;
+  text-align: center;
+  width: 50%;
+}
+#content #panel-content #panel-9 .selection {
+  float: left;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+#content #panel-content #panel-9 .selection.left {
+  float: left;
+}
+#content #panel-content #panel-9 .selection.right {
+  float: right;
 }
 #content #age-knob {
   background: url("../../images/panel.age.knob.png") no-repeat;
