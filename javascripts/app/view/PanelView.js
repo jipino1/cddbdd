@@ -47,28 +47,31 @@ define(['underscore', 'backbone', 'swig', 'helpers/events', 'plugins/text!templa
 			view.back.on("click", function (e) {
 				e.preventDefault();
 				
-				var bgPos = -18 * view.sectionCounter;
-				
 				if (view.sectionCounter > 1) {
 					view.panelContent.find("#panel-" + view.sectionCounter).fadeOut("slow", function () {
-						view.panelContent.find("#panel-" + (view.sectionCounter-1)).fadeIn();
 						view.sectionCounter--;
+						
+					var bgPos = -18 * (view.sectionCounter - 1),
+						posString = "0 " + bgPos + "px";
+						console.log("posString: " + posString)
+						view.panelContent.find("#panel-" + (view.sectionCounter)).fadeIn();
+						view.panelCounter.css({"background-position" : posString});
 					});
 				}
 			});
 			
 			view.next.on("click", function (e) {
 				e.preventDefault();
-				
-				var bgPos = -18 * view.panelCounter;
 
 				if (view.sectionCounter < 9) {
+					var bgPos = -18 * view.sectionCounter,
+						posString = "0 " + bgPos + "px";
+					
 					view.panelContent.find("#panel-" + view.sectionCounter).fadeOut("slow", function () {
 						view.panelContent.find("#panel-" + (view.sectionCounter+1)).fadeIn();
-						view.panelCounter.css({"background-position" : "0 " + bgPos + "px"})
+						view.panelCounter.css({"background-position" : posString});
 						
 						view.sectionCounter++;
-						console.log("go")
 					});
 				}
 			});

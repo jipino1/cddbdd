@@ -443,15 +443,43 @@ h1, h2, h3, h4, p, a {
 #content #panel-content #panel-6 .left-container, #content #panel-content #panel-6 .right-container, #content #panel-content #panel-6 .middle-container {
   float: left;
   margin-top: 50px;
-  width: 33%;
+  width: 25%;
+}
+#content #panel-content #panel-6 .right-container {
+  padding-left: 0;
 }
 #content #panel-content #panel-6 .header-one {
-  background-position: 0 -516px;
-  width: 300px;
+  background-position: 0 -415px;
+  margin-right: 40px;
+  width: 260px;
 }
 #content #panel-content #panel-6 .header-two {
-  background-position: 0 -568px;
-  width: 900px;
+  background-position: 0 -467px;
+  width: 558px;
+}
+#content #panel-content #panel-6 .item {
+  float: left;
+  width: 100%;
+}
+#content #panel-content #panel-6 .item-word {
+  margin-left: 5%;
+  width: 50%;
+}
+#content #panel-content #panel-7 .left-container, #content #panel-content #panel-7 .right-container, #content #panel-content #panel-7 .middle-container {
+  float: left;
+  margin-top: 50px;
+  width: 25%;
+}
+#content #panel-content #panel-7 .right-container {
+  padding-left: 0;
+}
+#content #panel-content #panel-7 .header-one {
+  background-position: 0 -509px;
+  width: 800px;
+}
+#content #panel-content #panel-7 .item {
+  float: left;
+  width: 100%;
 }
 #content #age-knob {
   background: url("../../images/panel.age.knob.png") no-repeat;
@@ -484,7 +512,38 @@ h1, h2, h3, h4, p, a {
 #content #age-ranges .age-range:nth-child(5) {
   margin-left: 35px;
 }
+#content .rectangular-button {
+  background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+  background-image: linear-gradient(top, #f4f1ee, #fff);
+  border-radius: 0;
+  border: 1px solid #37362e;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204, 198, 197, 0.5);
+  color: #37362e;
+  float: left;
+  height: 46px;
+  margin: 0 30px 30px 0;
+  padding: 30px 15px 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 75%;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+#content .rectangular-button:after {
+  color: #e9e6e4;
+  content: "";
+  display: block;
+  font-size: 30px;
+  height: 30px;
+  text-decoration: none;
+  text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+  position: absolute;
+  width: 30px;
+}
 #content .bottom-container {
+  float: left;
   width: 100%;
 }
 #content .bottom-container .panel-counter {

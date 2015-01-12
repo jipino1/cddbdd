@@ -46,7 +46,7 @@ define(['underscore', 'backbone', 'swig', 'helpers/events', 'plugins/text!templa
 			
 			view.initiate.on("click", function (e) {
 				e.preventDefault();
-				console.log("remove")
+
 				Events.trigger("remove:homepage");
 			})
 		}
