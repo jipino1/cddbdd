@@ -30,6 +30,7 @@
 			// Core Libraries
 			"modernizr": "lib/modernizr-2.6.2.min", //http://modernizr.com/docs
 			"jquery": "lib/jquery-1.11.2.min",		//http://api.jquery.com/
+			"jqueryui": "lib/jquery-ui-1.11.2.custom/jquery-ui.min",
 			"underscore": "lib/lodash.min",			//http://lodash.com/
 			"backbone": "lib/backbone-min",			//http://backbonejs.org/
 			"swig": "lib/swig.min",					//http://paularmstrong.github.com/swig/docs/
@@ -45,6 +46,8 @@
 			"helpers": "app/helpers",
 
 			// 3rd party
+			"transform": "lib/transform",
+			"knobKnob": "lib/knobKnob.jquery",
 			"facebook": "//connect.facebook.net/en_US/all",
 			"google-analytics": "//google-analytics.com/ga"
 		},
@@ -69,9 +72,19 @@
 				"deps": ["underscore"],
 				"exports": "swig"
 			},
+			
+			"knobKnob": {
+				"deps": ["jquery"],
+				"exports": "knobKnob"
+			},
 
 			"facebook": {
 				"exports": "FB"
+			},
+			
+			"jqueryui": {
+				"deps": ["jquery"],
+				"exports": "jqueryui"
 			}
 
 		}

@@ -2,7 +2,7 @@
  * @module view/SubView
  */
 
-define(['underscore', 'backbone', 'swig', 'helpers/events', 'plugins/text!template/HomeTemplate.html'], function (_, Backbone, swig, Events, HomeTemplate) {
+define(['underscore', 'backbone', 'swig', 'jqueryui', 'helpers/events', 'plugins/text!template/HomeTemplate.html'], function (_, Backbone, swig, jqueryui, Events, HomeTemplate) {
 
 	'use strict';
 
@@ -48,7 +48,17 @@ define(['underscore', 'backbone', 'swig', 'helpers/events', 'plugins/text!templa
 				e.preventDefault();
 
 				Events.trigger("remove:homepage");
-			})
+			});
+			
+			$("#knob-container > span").each(function() {
+				var value = parseInt($(this).text(), 10);
+				$(this).empty().slider({
+					value: value,
+					range: "min",
+					animate: true,
+					orientation: "vertical"
+				});
+			});
 		}
 
 	});

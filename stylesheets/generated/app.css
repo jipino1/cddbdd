@@ -36,9 +36,328 @@ a img {
   border: none;
 }
 
+/*
+#flip-container {
+	float: left; width: 100%;
+	.flip { 
+		border-radius: 5px; box-shadow: 0 2px 5px rbga(0, 0, 0, 0.7); float: left; font-size: 80px; font-weight: bold; height: 90px; line-height: 87px; margin: 5px; position: relative; width: 60px; 
+		li {
+			height: 100%; left: 0; position: absolute; top: 0; width: 100%; z-index: 1;
+			&:first-child { z-index: 1; }
+			a { 
+				display: block; height: 100%; perspective: 200px; 
+				div { 
+					height: 50%; left: 0; overflow: hidden; position: absolute; width: 100%; z-index: 1; 
+					.shadow { height: 100%; position: absolute; width: 100%; z-index: 2; }
+					&.up { 
+						transform-origin: 50% 100%; top: 0; 
+						&:after { background-color: rbga(0, 0, 0, .4); content: ""; height: 3px; left: 0; position: absolute; top: 44px; width: 100%; z-index: 5; }
+						div {
+							&.inn { top: 0; }
+						}
+					}
+					&.down { 
+						bottom: 0; transform-origin: 50% 0%; }
+						div {
+							&.inn { bottom: 0; }
+						}
+					div {
+						&.inn { background-color: #333; border-radius: 5px; color: #ccc; height: 200%; left: 0; position: absolute; text-align: center; text-shadow: 0 1px 2px #000; width: 100%; z-index: 1; }
+						
+					}
+				}
+			}
+		}
+	}	
+}
+body { 
+	background: url('../../images/bkg.main.jpg') repeat; background-size: cover; 
+	&.play {
+		ul {
+			li {
+				&.before { 
+					z-index: 3; 
+					.up { 
+						animation: turn2 .5s linear both; z-index: 2; 
+						.shadow { 
+							background: -moz-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+    						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, .1)), color-stop(100%, rgba(0, 0, 0, 1)));
+   							background: linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+  							background: -o-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+   							background: -ms-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+    						background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+   							animation: show .5s linear both; }
+					}
+					.down {
+						.shadow {
+							background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+							background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, .1)));
+							background: linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+							background: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+							background: -ms-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+							background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+							animation: show .5s linear both;
+						}
+					}
+				}
+				&.active { 
+					animation: asd .5s .5s linear both; z-index: 2; 
+					.down { 
+						animation: turn .5s .5s linear both; z-index: 2; 
+						.shadow {
+							background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+							background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, .1)));
+							background: linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+							background: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+							background: -ms-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+							background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+							animation: hide .5s .3s linear both;
+						}
+					}
+					.up {
+						.shadow {
+							background: -moz-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+							background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, .1)), color-stop(100%, rgba(0, 0, 0, 1)));
+							background: linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+							background: -o-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+							background: -ms-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+							background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+							animation: hide .5s .3s linear both;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@keyframes asd {
+	0% { z-index: 2; }
+	5% { z-index: 4; }
+	100% { z-index: 4; }
+}
+@keyframes turn {
+	0% { transform: rotateX(90deg); }
+	100% { transform: rorateX(0deg); }
+}
+@keyframes turn2 {
+	0% { transform: rotateX(0deg); }
+	100% { transform: rorateX(-90deg); }
+}
+@keyframes show {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes hide {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}*/
+/* ******************* NEW ********************** */
+ul.flip {
+  position: relative;
+  float: left;
+  margin: 5px;
+  width: 820px;
+  height: 90px;
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 87px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+ul.flip li {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+ul.flip li:first-child {
+  z-index: 2;
+}
+
+ul.flip li a {
+  display: block;
+  height: 100%;
+  perspective: 200px;
+}
+
+ul.flip li a div {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+ul.flip li a div .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+ul.flip li a div.up {
+  transform-origin: 50% 100%;
+  top: 0;
+}
+
+ul.flip li a div.up:after {
+  content: "";
+  position: absolute;
+  top: 44px;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+ul.flip li a div.down {
+  transform-origin: 50% 0%;
+  bottom: 0;
+}
+
+ul.flip li a div div.inn {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 200%;
+  color: #ccc;
+  text-shadow: 0 1px 2px #000;
+  text-align: center;
+  background-color: #333;
+  border-radius: 6px;
+}
+
+ul.flip li a div.up div.inn {
+  top: 0;
+}
+
+ul.flip li a div.down div.inn {
+  bottom: 0;
+}
+
+/* PLAY */
+body.play ul li.before {
+  z-index: 3;
+}
+
+body.play ul li.active {
+  animation: asd .2s .2s linear both;
+  z-index: 2;
+}
+
+@keyframes asd {
+  0% {
+    z-index: 2;
+  }
+  5% {
+    z-index: 4;
+  }
+  100% {
+    z-index: 4;
+  }
+}
+body.play ul li.active .down {
+  z-index: 2;
+  animation: turn .2s .2s linear both;
+}
+
+@keyframes turn {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+body.play ul li.before .up {
+  z-index: 2;
+  animation: turn2 .2s linear both;
+}
+
+@keyframes turn2 {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+/* SHADOW */
 body {
   background: url("../../images/bkg.main.jpg") repeat;
   background-size: cover;
+}
+
+body.play ul li.before .up .shadow {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black));
+  background: linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  animation: show .2s linear both;
+}
+
+body.play ul li.active .up .shadow {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black));
+  background: linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  animation: hide .2s .2s linear both;
+}
+
+/*DOWN*/
+body.play ul li.before .down .shadow {
+  background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1)));
+  background: linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  animation: show .2s linear both;
+}
+
+body.play ul li.active .down .shadow {
+  background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1)));
+  background: linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  animation: hide .2s .2s linear both;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* ************************* END ********************** */
+.arrow {
+  background: url("../../images/arrow.png") no-repeat;
+  float: left;
+  height: 33px;
+  width: 38px;
 }
 
 #main {
@@ -53,6 +372,39 @@ h1, h2, h3, h4, p, a {
 #content {
   margin: 0 auto;
   width: 1280px;
+  /*#flip-container {
+  	float: left; width: 100%;
+  	.flip { 
+  		border-radius: 5px; box-shadow: 0 2px 5px rbga(0, 0, 0, 0.7); float: left; font-size: 80px; font-weight: bold; height: 90px; line-height: 87px; margin: 5px; position: relative; width: 60px; 
+  		li {
+  			height: 100%; left: 0; position: absolute; top: 0; width: 100%; z-index: 1;
+  			&:first-child { z-index: 1; }
+  			a { 
+  				display: block; height: 100%; perspective: 200px; 
+  				div { 
+  					height: 50%; left: 0; overflow: hidden; position: absolute; width: 100%; z-index: 1; 
+  					.shadow { height: 100%; position: absolute; width: 100%; z-index: 2; }
+  					&.up { 
+  						transform-origin: 50% 100%; top: 0; 
+  						&:after { background-color: rbga(0, 0, 0, .4); content: ""; height: 3px; left: 0; position: absolute; top: 44px; width: 100%; z-index: 5; }
+  						div {
+  							&.inn { top: 0; }
+  						}
+  					}
+  					&.down { 
+  						bottom: 0; transform-origin: 50% 0%; }
+  						div {
+  							&.inn { bottom: 0; }
+  						}
+  					div {
+  						&.inn { background-color: #333; border-radius: 5px; color: #ccc; height: 200%; left: 0; position: absolute; text-align: center; text-shadow: 0 1px 2px #000; width: 100%; z-index: 1; }
+  						
+  					}
+  				}
+  			}
+  		}
+  	}	
+  }*/
 }
 #content .headers {
   float: left;
@@ -113,6 +465,59 @@ h1, h2, h3, h4, p, a {
 }
 #content .knob-bar .knob.five {
   margin-top: 10px;
+}
+#content .ui-state-default {
+  background: url("../../images/bkg.btn.sprite.png") 0 0 no-repeat;
+  border: 0;
+  float: left;
+  height: 44px;
+  margin-left: -10px;
+  overflow: hidden;
+  width: 44px;
+}
+#content .ui-widget-header {
+  background: transparent;
+}
+#content .knob {
+  width: 83px;
+  height: 83px;
+  position: relative;
+}
+#content .knob .top {
+  position: absolute;
+  width: 279px;
+  height: 280px;
+  background: url("../../images/panel.age.knob.png") no-repeat;
+  z-index: 10;
+  cursor: default !important;
+  /*&:after { 
+  	content:'';
+  	width:10px;
+  	height:10px;
+  	background-color:#666;
+  	position:absolute;
+  	top:50%;
+  	left:10px;
+  	margin-top:-5px;
+  	border-radius: 50%;
+  	cursor:default !important;
+  	box-shadow: 0 0 1px #5a5a5a inset;
+  }*/
+}
+#content .knob.base {
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+  box-shadow: 0 5px 0 #4a5056,5px 5px 5px #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#content .knob [draggable] {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 #content .header-one,
 #content .header-two,
@@ -204,6 +609,17 @@ h1, h2, h3, h4, p, a {
   margin-left: 35px;
   width: 40%;
 }
+#content #knob-container .ui-slider {
+  background-color: #33322a;
+  border-radius: 3px;
+  float: left;
+  height: 150px;
+  margin-right: 65px;
+  width: 12px;
+  -webkit-box-shadow: inset 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+}
 #content #init-btn {
   background: url("../../images/bkg.initiate.png") no-repeat;
   float: left;
@@ -241,6 +657,16 @@ h1, h2, h3, h4, p, a {
   margin-left: 60px;
   text-indent: -9999px;
   width: 420px;
+}
+#content #panel-content #panel-1 #control {
+  float: left;
+  margin-top: 70px;
+}
+#content #panel-content #panel-1 #knob-container {
+  width: 7%;
+}
+#content #panel-content #panel-1 #knob-container .ui-slider {
+  height: 452px;
 }
 #content #panel-content .left-container, #content #panel-content .right-container {
   float: left;

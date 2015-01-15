@@ -2,7 +2,33 @@
  * @module view/SubView
  */
 
-define(['underscore', 'backbone', 'swig', 'helpers/events', 'plugins/text!template/PanelTemplate.html'], function (_, Backbone, swig, Events, PanelTemplate) {
+define(['underscore', 
+		'backbone', 
+		'swig', 
+		'helpers/events', 
+		'plugins/text!template/PanelTemplate.html',
+		'view/PanelView1',
+		'view/PanelView2',
+'view/PanelView3',
+'view/PanelView4',
+'view/PanelView5',
+'view/PanelView6',
+'view/PanelView7',
+'view/PanelView8','view/PanelView9'], 
+		function (_, 
+					Backbone, 
+					swig, 
+					Events, 
+					PanelTemplate,
+					PanelView1,
+			PanelView2,
+		PanelView3,
+		PanelView4,
+		PanelView5,
+		PanelView6,
+		PanelView7,
+		PanelView8,
+		PanelView9) {
 
 	'use strict';
 
@@ -32,6 +58,16 @@ define(['underscore', 'backbone', 'swig', 'helpers/events', 'plugins/text!templa
 
 			view.panelTemplate = swig.compile(PanelTemplate);
 			view.$el.append(view.panelTemplate());
+			
+			view.panelView1 = new PanelView1({"el": "#panel-content"});
+			view.panelView2 = new PanelView2({"el": "#panel-content"});
+			view.panelView3 = new PanelView3({"el": "#panel-content"});
+			view.panelView4 = new PanelView4({"el": "#panel-content"});
+			view.panelView5 = new PanelView5({"el": "#panel-content"});
+			view.panelView6 = new PanelView6({"el": "#panel-content"});
+			view.panelView7 = new PanelView7({"el": "#panel-content"});
+			view.panelView8 = new PanelView8({"el": "#panel-content"});
+			view.panelView9 = new PanelView9({"el": "#panel-content"});
 			
 			view.panelContent = view.$el.find("#panel-content");
 			view.back = view.$el.find("#back-btn");
