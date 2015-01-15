@@ -604,12 +604,14 @@ h1, h2, h3, h4, p, a {
   overflow: hidden;
   width: 63px;
 }
-#content #knob-container {
+#content #knob-container,
+#content .panel-knob-container {
   float: left;
   margin-left: 35px;
   width: 40%;
 }
-#content #knob-container .ui-slider {
+#content #knob-container .ui-slider,
+#content .panel-knob-container .ui-slider {
   background-color: #33322a;
   border-radius: 3px;
   float: left;
@@ -736,13 +738,31 @@ h1, h2, h3, h4, p, a {
   margin-top: 22px;
 }
 #content #panel-content #panel-3 .right-container {
-  margin-left: -7px;
+  margin-left: -43px;
   padding-left: 0;
 }
 #content #panel-content #panel-3 .flipper-container {
   float: left;
   margin-top: 40px;
   width: 100%;
+}
+#content #panel-content #panel-3 .panel-knob-container .ui-state-default {
+  background-position: 0 -199px;
+  height: 24px;
+}
+#content #panel-content #panel-3 .panel-knob-container .ui-slider {
+  height: 90px;
+}
+#content #panel-content #panel-3 #flip-container {
+  background: url("../../images/bkg.flipper.2.png") no-repeat;
+  float: left;
+  height: 135px;
+  margin-top: 35px;
+  width: 822px;
+}
+#content #panel-content #panel-3 .flip {
+  margin: 13px 0 0 19px;
+  width: 674px;
 }
 #content #panel-content #panel-4 #social-posts {
   float: left;
@@ -797,6 +817,9 @@ h1, h2, h3, h4, p, a {
   float: left;
   width: 100%;
 }
+#content #panel-content #panel-5 .panel-top-container {
+  margin-top: 20px;
+}
 #content #panel-content #panel-5 .panel-top-container .knob-bar {
   height: 12px;
   margin-top: 35px;
@@ -804,6 +827,15 @@ h1, h2, h3, h4, p, a {
 }
 #content #panel-content #panel-5 .panel-top-container .knob-bar .knob {
   margin-top: -17px;
+}
+#content #panel-content #panel-5 .panel-top-container .panel-knob-container .ui-state-default {
+  background-position: 0 0;
+  height: 43px;
+  margin-top: -8px;
+}
+#content #panel-content #panel-5 .panel-top-container .panel-knob-container .ui-slider {
+  height: 12px;
+  width: 980px;
 }
 #content #panel-content #panel-5 .panel-bottom-container .knob-bar {
   height: 55px;
@@ -829,12 +861,13 @@ h1, h2, h3, h4, p, a {
 }
 #content #panel-content #panel-5 .panel-bottom-container .left-container {
   margin-bottom: -15px;
-  margin-top: 60px;
+  margin-top: 45px;
   padding-right: 1%;
   width: 12%;
 }
 #content #panel-content #panel-5 .panel-bottom-container .right-container {
-  margin-bottom: -15px;
+  margin-bottom: 0;
+  margin-top: 30px;
   width: 60%;
 }
 #content #panel-content #panel-5 .panel-bottom-container .item-word {
@@ -846,11 +879,22 @@ h1, h2, h3, h4, p, a {
   font-weight: bold;
   height: 30px;
   margin-left: 6%;
-  margin-top: -10px;
+  margin-top: -2px;
   padding: 14px 15px 18px;
   text-align: center;
   text-transform: uppercase;
   width: 65%;
+}
+#content #panel-content #panel-5 .panel-knob-container {
+  margin-left: 0;
+  width: 25px;
+}
+#content #panel-content #panel-5 .panel-knob-container .ui-state-default {
+  background-position: 0 -199px;
+  height: 24px;
+}
+#content #panel-content #panel-5 .panel-knob-container .ui-slider {
+  height: 60px;
 }
 #content #panel-content #panel-5 #accent-container {
   float: left;

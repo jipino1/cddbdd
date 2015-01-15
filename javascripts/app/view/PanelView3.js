@@ -5,11 +5,13 @@
 define(['underscore', 
 		'backbone', 
 		'swig', 
+		'jqueryui',
 		'helpers/events', 
 		'plugins/text!template/Panel3Template.html'], 
 		function (_, 
 					Backbone, 
 					swig, 
+					jqueryui,
 					Events, 
 					Panel3Template) {
 
@@ -45,6 +47,16 @@ define(['underscore',
 				e.preventDefault();
 				
 				view.secondPlay();
+			});
+			
+			$("#panel-3 .panel-knob-container > span").each(function() {
+				var value = parseInt($(this).text(), 10);
+				$(this).empty().slider({
+					value: value,
+					range: "min",
+					animate: true,
+					orientation: "vertical"
+				});
 			});
 		},
 		
