@@ -527,7 +527,7 @@ box-shadow: inset 0px 3px 15px 12px rgba(0,0,0,0.57);
 			.header-two { background-position: 0 -364px; width: 395px; }
 			.panel-top-container, .panel-bottom-container { float: left; width: 100%; }
 			.panel-top-container {
-				margin-top: 20px;
+				margin-top: 30px;
 				.knob-bar { 
 					height: 12px; margin-top: 35px; width: 980px; 
 					.knob { margin-top: -17px; }
@@ -588,6 +588,13 @@ box-shadow: inset 0px 3px 15px 12px rgba(0,0,0,0.57);
 			.left-container {
 				p { margin-bottom: 23px; text-align: left; text-transform: uppercase; }
 				.knob-bar { height: 452px; margin-right: 15px; }
+			}
+			.panel-knob-container {
+				margin-left: 0; width: 35px;
+				.ui-state-default { background-position: 0 0; height: 44px; }
+				.ui-slider {
+					height: 452px; 
+				}
 			}
 		}
 		#panel-9 {

@@ -34,6 +34,22 @@ define(['underscore',
 
 			view.panel8Template = swig.compile(Panel8Template);
 			view.$el.find(".bottom-container").before(view.panel8Template());
+			
+			view.initPanelInteraction();
+		},
+		
+		"initPanelInteraction": function () {
+			var view = this;
+			
+			$("#panel-8 .panel-knob-container > span").each(function() {
+				var value = parseInt($(this).text(), 10);
+				$(this).empty().slider({
+					value: value,
+					range: "min",
+					animate: true,
+					orientation: "vertical"
+				});
+			});
 		}
 
 	});
