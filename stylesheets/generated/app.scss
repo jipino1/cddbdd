@@ -397,6 +397,8 @@ h1, h2, h3, h4, p, a { color: #fff; font-family: Verdana, Helvetica, sans-serif;
 	  -webkit-user-select: none;
 	  user-select: none;
 	}
+	.flip-container { background: url('../../images/bkg.flipper.2.png') no-repeat; float: left; height: 135px; margin-top: 35px; width: 822px; }
+	.flip { margin: 13px 0 0 19px; width: 674px; }
 	.header-one,
 	.header-two,
 	.header-three {
@@ -508,7 +510,7 @@ box-shadow: inset 0px 3px 15px 12px rgba(0,0,0,0.57);
 					height: 90px; 
 				}
 			}
-			#flip-container { background: url('../../images/bkg.flipper.2.png') no-repeat; float: left; height: 135px; margin-top: 35px; width: 822px; }
+			.flip-container { background: url('../../images/bkg.flipper.2.png') no-repeat; float: left; height: 135px; margin-top: 35px; width: 822px; }
 			.flip { margin: 13px 0 0 19px; width: 674px; }
 		}
 		#panel-4 {

@@ -519,6 +519,17 @@ h1, h2, h3, h4, p, a {
   -webkit-user-select: none;
   user-select: none;
 }
+#content .flip-container {
+  background: url("../../images/bkg.flipper.2.png") no-repeat;
+  float: left;
+  height: 135px;
+  margin-top: 35px;
+  width: 822px;
+}
+#content .flip {
+  margin: 13px 0 0 19px;
+  width: 674px;
+}
 #content .header-one,
 #content .header-two,
 #content .header-three {
@@ -753,7 +764,7 @@ h1, h2, h3, h4, p, a {
 #content #panel-content #panel-3 .panel-knob-container .ui-slider {
   height: 90px;
 }
-#content #panel-content #panel-3 #flip-container {
+#content #panel-content #panel-3 .flip-container {
   background: url("../../images/bkg.flipper.2.png") no-repeat;
   float: left;
   height: 135px;

@@ -7,6 +7,7 @@ define(['underscore',
 		'swig', 
 		'knobKnob',
 		'jqueryui',
+		'jqueryknob',
 		'helpers/events', 
 		'plugins/text!template/Panel1Template.html'], 
 		function (_, 
@@ -14,6 +15,7 @@ define(['underscore',
 					swig, 
 					knobKnob,
 					jqueryui,
+					jqueryknob,
 					Events, 
 					Panel1Template) {
 
@@ -64,6 +66,10 @@ define(['underscore',
 					animate: true,
 					orientation: "vertical"
 				});
+			});
+			
+			$(function() {
+				view.$el.find(".dial").knob();
 			});
 		}
 	});

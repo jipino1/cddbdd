@@ -43,10 +43,10 @@ define(['underscore',
 		"initPanelInteraction": function () {
 			var view = this;
 			
-			view.$el.find(".arrow").on("click", function (e) {
+			view.$el.find("#panel-3 .arrow").on("click", function (e) {
 				e.preventDefault();
 				
-				view.secondPlay();
+				view.updateFlipper();
 			});
 			
 			$("#panel-3 .panel-knob-container > span").each(function() {
@@ -60,12 +60,12 @@ define(['underscore',
 			});
 		},
 		
-		"secondPlay": function() {
+		"updateFlipper": function() {
 			$("body").removeClass("play");
 			
-			var aa = $("ul.secondPlay li.active");
+			var aa = $("#panel-3 ul.flipper-content li.active");
 			if (aa.html() == undefined) {
-				aa = $("ul.secondPlay li").eq(0);
+				aa = $("#panel-3 ul.flipper-content li").eq(0);
 				aa.addClass("before")
 					.removeClass("active")
 					.next("li")
@@ -73,14 +73,14 @@ define(['underscore',
 					.closest("body")
 					.addClass("play");		
 			} else if (aa.is(":last-child")) {
-				$("ul.secondPlay li").removeClass("before");
+				$("#panel-3 ul.flipper-content li").removeClass("before");
 				aa.addClass("before").removeClass("active");
-				aa = $("ul.secondPlay li").eq(0);
+				aa = $("#panel-3 ul.flipper-content li").eq(0);
 				aa.addClass("active")
 					.closest("body")
 					.addClass("play")
 			} else {
-				$("ul.secondPlay li").removeClass("before");
+				$("#panel-3 ul.flipper-content li").removeClass("before");
 				aa.addClass("before")
 				  .removeClass("active")
 				  .next("li")
